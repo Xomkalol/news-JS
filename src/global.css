@@ -1,35 +1,119 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+}
+
 body {
+    margin: 0;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    min-width: 320px;
+    max-width: 1920px;
+    margin-inline: auto;
 }
 
 header {
-    padding: 10px 30px;
+    padding: 10px clamp(15px, 3vw, 40px);
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: clamp(26px, 3vw, 40px);
     font-weight: 800;
+    overflow-wrap: anywhere;
 }
 
 footer {
-    height: 100px;
+    min-height: 100px;
+    padding: 20px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-footer .copyright {
-    font-size: 14px;
-    color: #333;
     text-align: center;
 }
+
+footer .copyright {
+    font-size: clamp(12px, 1.2vw, 14px);
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+}
+
 footer .copyright a {
     color: #444;
+    overflow-wrap: anywhere;
 }
+
 footer .copyright a:hover {
     color: #555;
 }
+
 footer .copyright:before {
-    content: '©';
+    content: "©";
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    footer {
+        min-height: 80px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        padding-inline: 40px;
+    }
+}
+
+
+footer {
+    min-height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .copyright {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer .copyright a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    color: #fff;
+}
+
+.rsschool-link img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    footer {
+        gap: 12px;
+        padding: 15px 10px;
+    }
 }
