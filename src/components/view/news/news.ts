@@ -1,5 +1,5 @@
 import './news.css';
-import type { Article } from '../../../types/newsApi';
+import type { Article } from '../../types/newsApi';
 
 type NewsItem = Pick<
     Article,

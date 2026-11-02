@@ -1,7 +1,7 @@
 import AppLoader from './appLoader';
-import { Endpoint } from '../../types/common';
-import type { Callback } from '../../types/common';
-import type { NewsResponse, SourcesResponse } from '../../types/newsApi';
+import { Endpoint } from '../types/common';
+import type { Callback } from '../types/common';
+import type { NewsResponse, SourcesResponse } from '../types/newsApi';
 
 class AppController extends AppLoader {
     public getSources(callback: Callback<SourcesResponse>): void {

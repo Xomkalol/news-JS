@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import type { NewsResponse, SourcesResponse } from '../../types/newsApi';
+import type { NewsResponse, SourcesResponse } from '../types/newsApi';
 
 export class AppView {
     private readonly news: News;

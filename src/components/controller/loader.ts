@@ -1,5 +1,5 @@
-import { Endpoint, HttpMethod, HttpStatus } from '../../types/common';
-import type { Callback, LoaderOptions, RequestParams } from '../../types/common';
+import { Endpoint, HttpMethod, HttpStatus } from '../types/common';
+import type { Callback, LoaderOptions, RequestParams } from '../types/common';
 
 class Loader {
     private readonly baseLink: string;
